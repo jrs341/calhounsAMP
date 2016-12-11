@@ -23,27 +23,42 @@
     <style amp-custom>
       /* any custom style goes here */
       body {
-        background-color: white;
+        background-image: url("images/old_map.png");
+        padding-left: 7px;
+        padding-right: 5px;
       }
 
-      /*amp-img {
-        width: 320px;
-        height: 200px;
-      }*/
+      #logo {
+        margin-top: 5px;
+        margin-left: -5px;
+      }
+
     </style>
 
   </head>
 
   <body>
-    <h1>Calhoun's</h1>
+    <nav>
+
+      <amp-img id="logo" src="images/circleC.png" height="61" width="70"
+      >
+      </amp-img>
+
+      <h1>Calhoun's</h1>
+
+    </nav>
+
+    <header>
    
-    <amp-img src="images/headerPic-1280"
-      srcset="images/headerPic-1024.jpg 1024w, images/headerPic-800.jpg 800w, images/headerPic-640.jpg 640w, images/headerPic-300.jpg 300w"
-      width="1280"
-      height="610"
-      layout="responsive"
-      alt="an image">
-    </amp-img>
+      <amp-img src="images/headerPic-1280"
+        srcset="images/headerPic-1024.jpg 1024w, images/headerPic-800.jpg 800w, images/headerPic-640.jpg 640w, images/headerPic-300.jpg 300w"
+        width="1280"
+        height="610"
+        layout="responsive"
+        alt="an image">
+      </amp-img>
+
+    </header>
 
     <h1>
       Your Front Row Seat to a Texas Gem, The Guadalupe River
@@ -62,6 +77,11 @@
       <p>
         Need lodging? We have cabins!
       </p>
+    <footer>
+      </br>
+      </br>
+        <p>Copyright &copy; Calhoun's Riverside RV Retreat 2016</p>
+    </footer>
 
   </body>
 </html>
