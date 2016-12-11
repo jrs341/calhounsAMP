@@ -30,9 +30,89 @@
         padding-right: 5px;
       }
 
+      /*nav {
+        height: 70px;
+      }*/
+
       #logo {
+        display: inline-block;
+        width: 212px;
         margin-top: 5px;
         margin-left: -5px;
+      }
+
+      #brand {
+        margin: 0px 0px 5px 7px;
+      }
+/*start collapsed nav menu*/
+      #collapsedMenu {
+        height: 70px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 100;
+      }
+
+      ul{
+        list-style:none;  
+        margin:0;
+        padding:0;
+        height: 70px;
+        /*width:200px;  
+        margin:20px;*/  
+      }
+      ul li{
+        display:block;
+        height:20px;    
+        padding:5px;  
+        border-top:1px solid rgba(255,255,255,.1);  
+        transition:all .5s;
+        opacity:0;
+      }
+      ul li:hover{
+        background:#ccc;
+      }
+      ul li:last-child{
+        border-bottom-left-radius:4px;
+        border-bottom-right-radius:4px;
+      }
+      label:before{
+        height:2px;
+        width:20px;
+        background:blue;
+        display:inline-block;
+        content:"";
+        box-shadow:0px -5px 0px 0px  blue,
+                   0px -10px 0px 0px blue;
+        margin-right:10px;
+        transition:all .5s;
+        position:relative;
+        opacity:1;
+      }
+      label{
+        display:block;  
+        padding:10px;
+        color:white;  
+        cursor:pointer; 
+      }
+      input[type="checkbox"]{
+        visibility:hidden;
+        position:absolute;
+      }
+      #collapse:checked ~ li{  
+        margin-top:0;
+        opacity:1;
+      }
+      #collapse:checked{
+        position:relative;
+        right:calc(-160px);
+        opacity:0.5; 
+      }
+
+/*end collapsed nav menu*/
+
+      header {
+        z-index: 1;
       }
 
       #social {
@@ -46,15 +126,26 @@
   </head>
 
   <body>
-    <nav>
 
-      <amp-img id="logo" src="images/circleC.png" height="61" width="70"
+    <!-- <nav> -->
+    <div id="logo">
+      <amp-img src="images/circleC.png" height="61" width="70"
       >
       </amp-img>
-
-      <h1>Calhoun's</h1>
-
-    </nav>
+      <p id="brand">Calhoun's Riverside RV Retreat</p>
+    </div>
+    <div id="collapsedMenu">
+      <ul>
+        <input type="checkbox" id="collapse"/> 
+        <label for="collapse"></label>    
+               
+        <li>icon1</li>
+        <li>icon2</li>
+        <li>icon3</li>
+        <li>icon4</li>
+      </ul>
+    </div>
+    <!-- </nav> -->
 
     <header>
    
@@ -86,8 +177,8 @@
         Need lodging? We have cabins!
       </p>
     <footer>
-      <div>
-        <div id="social">
+      <div id="social">
+        
         <amp-social-share type="twitter"
           data-param-app_id="254325784911610"
           data-param-text="Check out Calhoun's on Twitter"
@@ -105,7 +196,7 @@
           data-param-url="https://www.facebook.com/Calhouns-Riverside-RV-Retreat-119688484898552/"
           data-param-attribution="AMPhtml">
         </amp-social-share>
-      </div>
+      
       </div>
       </br>
       </br>
