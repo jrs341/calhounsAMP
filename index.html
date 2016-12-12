@@ -31,7 +31,7 @@
       }
 
       /*nav {
-        height: 70px;
+        position: fixed;
       }*/
 
       #logo {
@@ -42,10 +42,82 @@
       }
 
       #brand {
+        color: #213fd9;
         margin: 0px 0px 5px 7px;
       }
+/*start nav menu*/
+      #menu {
+        margin-top:25px;
+        display:inline-block;
+        float: right;
+      }
+
+      #menu ul {
+        list-style:none;
+        position:relative;
+        float:right;
+        margin:0;
+        padding:0
+      }
+
+      #menu ul a {
+        display:block;
+        color:#333;
+        text-decoration:none;
+        font-weight:700;
+        font-size:12px;
+        line-height:32px;
+        padding:0 15px;
+      }
+
+      #menu ul li {
+        z-index: 200;
+        position:relative;
+        float:right;
+        margin:0;
+        padding:0
+      }
+
+      #menu ul li.current-menu-item {
+        background:#ddd
+      }
+
+      #menu ul li:hover {
+        background:#f6f6f6
+      }
+
+      #menu ul ul {
+        display: none;
+        position:absolute;
+        top:100%;
+        left:0;
+        background:#fff;
+        padding:0
+      }
+
+      #menu ul ul li {
+        float:none;
+        /*width:200px*/
+      }
+
+      #menu ul ul a {
+        line-height:120%;
+        padding:10px 15px
+      }
+
+      #menu ul ul ul {
+        top:0;
+        left:100%
+      }
+
+      #menu ul li:hover > ul {
+        display:block
+      }
+/*end nav menu*/
+
 /*start collapsed nav menu*/
       #collapsedMenu {
+        display: none;
         margin-top: 32px;
         position: absolute;
         right: 0px;
@@ -53,17 +125,15 @@
         z-index: 100;
       }
 
-      ul{
+      #collapsedMenu ul{
         list-style:none;  
         margin:0;
         padding:0; 
-        border-top-left-radius:5px;
-        border-top-right-radius:5px;
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;  
       }
 
-      ul li {
+      #collapsedMenu ul li {
         display:block;
         height:20px;    
         padding:5px; 
@@ -73,49 +143,46 @@
         opacity:0;
       }
 
-      ul:firstchild {
-        border-top-left-radius:5px;
-        border-top-right-radius:5px;
-      }
-      ul a {
+      #collapsedMenu ul a {
         text-decoration: none;
+        cursor: default;
       }
 
-      ul a:visited {
-        color: blue;
+      #collapsedMenu ul a:visited {
+        color: #213fd9;
       }
 
-      ul li:hover{
+      #collapsedMenu ul li:hover{
         background:#ccc;
       }
 
-      ul li:last-child{
+      #collapsedMenu ul li:last-child{
         border-bottom-left-radius:4px;
         border-bottom-right-radius:4px;
       }
 
-      label:before{
+      #collapsedMenu label:before{
         height:2.4px;
         width:24px;
-        background:blue;
+        background:#213fd9;
         display:inline-block;
         content:"";
-        box-shadow:0px -7px 0px 0px  blue,
-                   0px -14px 0px 0px blue;
+        box-shadow:0px -7px 0px 0px #213fd9,
+                   0px -14px 0px 0px #213fd9;
         margin-right:10px;
         transition:all .5s;
         position:relative;
         opacity:1;
       }
 
-      label{
+      #collapsedMenu label{
         /*display:block;  */
         padding:10px;
         /*color:white;  */
         /*cursor:pointer; */
       }
      
-      input[type="checkbox"]{
+      #collapsedMenu input[type="checkbox"]{
         visibility:hidden;
         /*position:absolute;*/
         margin-left: 70px;
@@ -143,6 +210,8 @@
         margin-left: auto;
         margin-right: auto;
       }
+/*media queries*/
+
 
     </style>
 
@@ -157,6 +226,44 @@
       </amp-img>
       <p id="brand">Calhoun's Riverside RV Retreat</p>
     </div>
+
+    <div id="menu">
+      <ul>
+        <li><a href="#">Additional Information</a>
+          <ul>
+            <li>
+              <a href="rates.html">Current Rates</a>
+            </li>
+            <li>
+              <a href="cabins.html">Cabins</a>
+            </li>
+            <li>
+              <a href="rules.html">Rules</a>
+            </li>
+            <li>
+              <a href="rentalAgreements.html">Rental Agreements</a>
+            </li>
+            <li>
+              <a href="boatramp.html">Boat Ramp</a>
+            </li>
+            <li>
+              <a href="meetCalhoun.html">Meet Calhoun</a>
+            </li>
+            <li>
+              <a href="http://www.lacrossealertsmobile.com/v1.2/#device-7FFF4349485CC4E6">Current Weather</a>
+            </li>
+            <li>
+              <a href="http://www.accuweather.com/en/us/port-lavaca-tx/77979/weather-forecast/335931">Local Weather Radar</a>
+            </li>
+            <li>
+              <a href="riverLevel.html">River Level Info</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li> 
+      </ul>
+    </div>
+
     <div id="collapsedMenu">
       <ul>
         <input type="checkbox" id="collapse"/> 
