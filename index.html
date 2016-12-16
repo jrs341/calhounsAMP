@@ -49,6 +49,10 @@
         border-color: #213fd9;
       }
 
+      p {
+        text-indent: 10px;
+      }
+
       .btn{
         text-decoration:none;
         color:#333333;
@@ -67,15 +71,6 @@
         -moz-border-radius: 16px;
         border-radius: 16px;
       }
-      /*nav:before {
-  content : "";
-  position: absolute;
-  left    : 0;
-  bottom  : 0;
-  height  : 1px;
-  width   : 97%;  /* or 100px */
-  /*border-bottom:1px solid magenta;
-}*/
 
       #logo {
         display: inline-block;
@@ -87,6 +82,7 @@
       #brand {
         color: #213fd9;
         margin: 0px 0px 5px 7px;
+        text-indent: 0px;
       }
 /*start nav menu*/
       #menu {
@@ -108,8 +104,6 @@
         display:block;
         color: #5a4130;
         text-decoration:none;
-        /*font-weight:700;
-        font-size:12px;*/
         line-height:32px;
         padding:0 15px;
       }
@@ -128,21 +122,11 @@
         background:#ddd
       }
 
-      #menu ul li:hover:first-child {
-        /*background: none;*/
-      }
-
-      #menu ul li:hover {
-        /*background:#ccc;*/
-      }
-
       #menu ul ul {
         display: none;
         position:absolute;
         top:100%;
         left:0;
-        /*background:#F5DEB3;*/
-        /*background-image: url("images/old_map.png");*/
         background: none;
         padding:0
       }
@@ -151,7 +135,6 @@
         background:#ccc;
         float:none;
         background-image: url("images/old_map.png");
-        /*width:200px*/
       }
 
       #menu ul ul li:hover {
@@ -176,7 +159,6 @@
 
 /*start collapsed nav menu*/
       #collapsedMenu {
-        /*display: none;*/
         margin-top: 32px;
         position: absolute;
         right: 0px;
@@ -188,7 +170,6 @@
         list-style:none;  
         margin:0;
         padding:0; 
-        /*border: 1.2px solid blue;*/
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;  
       }
@@ -199,9 +180,7 @@
         width: 140px;    
         padding:5px;
         background-image: url("images/old_map.png"); 
-        /*background-color: #F5DEB3;*/ 
-        /*border-top:1px solid rgba(255,255,255,.1);  */
-        transition:all .5s;
+        /*transition:all .5s;*/
         opacity:0;
       }
 
@@ -211,12 +190,8 @@
         color: #5a4130;
       }
 
-      #collapsedMenu ul a:visited {
-        /*color: #213fd9;*/
-      }
-
       #collapsedMenu ul li:hover{
-        background:#ccc;
+        background:#F5DEB3;
       }
 
       #collapsedMenu ul li:last-child{
@@ -404,20 +379,22 @@
         Your Front Row Seat to a Texas Gem, The Guadalupe River
       </h1>
 
-      <p style="margin-right: 7px">
+      <p style="margin-right: 7px";>
         Calhoun’s Riverside RV Retreat offers visitors the best of the Guadulupe River. Just outside Tivoli, Texas, and a short drive from Victoria, Port O'Connor and Point Comfort, Calhoun’s is centrally located and filled with wildlife. Once you see it you’ll know: Calhoun’s is unlike any other Texas RV park. Here, visitors can take advantage of some of the best fishing, bow fishing, boating, and canoing and kayaking in Texas, or simply enjoy the river from their RV! Just 17 miles from Port Lavaca, 30 miles from Rockport and Victoria, Calhoun’s offers a peaceful RV camping experience nestled beneath giant oak trees
-      <br>
-      <br>
+      </p>
+      
+      <p style="margin-right: 7px";>
         Forget trying to get a spot on the bay, Calhoun’s is just 5 short miles by boat from the San Antonio Bay. The river is plenty deep enough to accommodate larger boats, and with Calhoun’s private boat ramp, getting there is easy. Located in the center of the Crescent Coast, visitors can boat their way to the Gulf of Mexico, while enjoying an abundancy of wildlife.
-      <br>
-      <br>
+      </p>
+      
+      <p style="margin-right: 7px";>
         Calhoun’s offers more than a little something for everyone. Whether you enjoy deer, water fowel or feral hog hunting, this is a sportsmen’s paradise. If you’re a Winter Texan looking for an alternative to the crowds, Calhoun’s is a unique Texas RV Park centrally located to the region’s historic and resort towns. Tired of RV parks without a tree in sight? Wanting a little room to get comfortable? Seeking a little adventure on the river? Calhoun’s is a different kind of place. Paddle down the river one day, take a drive to Corpus Christi the next and enjoy all the variety in this quiet corner of the Crescent Coast. 
       </p>
       <p style="text-align: center; margin-bottom: 150px">
         Owned and operated by a U.S. Army veteran, Calhoun’s is all about providing sportsmen, Winter Texans and families with a great place to experience the best of Texas!
       <br>
       <br>
-        Need lodging? <button><a href="cabins.html" style="text-decoration: none">Checkout our cabins!</a></button>
+        Need lodging? <button class="btn pill"><a href="cabins.html" style="text-decoration: none">Checkout our cabins!</a></button>
       </p>
     <footer>
       <div id="social">
